@@ -86,3 +86,17 @@ nav{
 .cta-btn:hover{
     background-color: #3e8e41;
 }
+.service{
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.service img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.service-content{
+    display: none;
+}
