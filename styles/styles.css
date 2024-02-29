@@ -86,15 +86,16 @@ nav{
 .cta-btn:hover{
     background-color: #3e8e41;
 }
-.service{
-    width: 25%;
+.services-container{
+    width: auto;
     padding: 10px;
     box-sizing: border-box;
 }
 
-.service img{
+.service-image img{
     width: 100%;
     cursor: pointer;
+    height: auto;
 }
 
 .service-content{
@@ -103,7 +104,17 @@ nav{
     transition: opacity 0.3s ease;
 }
 
-.service-content.active{
+.service-content .service.active{
     display: block;
     opacity: 1;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.service-image{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
 }
