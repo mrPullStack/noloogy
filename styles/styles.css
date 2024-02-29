@@ -93,9 +93,9 @@ nav{
 }
 
 .service-image img{
-    width: 100%;
+    width: 300px;
     cursor: pointer;
-    height: auto;
+    height: 200px;
 }
 
 .service-content{
@@ -113,8 +113,8 @@ nav{
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
-.service-image{
+/* .service-image img{
     height: 200px;
     overflow: hidden;
     position: relative;
-}
+} */
