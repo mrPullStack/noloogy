@@ -14,16 +14,23 @@
 //     currentService.nextElementSibling.classList.add('active');
 // }
 
-function showContent(event) {
-    const services = document.getElementsByClassName('service');
+// function showContent(event) {
+//     const services = document.getElementsByClassName('service');
   
-    for (let i = 0; i < services.length; i++) {
-      const serviceContent = services[i].getElementsByClassName('service-content')[0];
-      services[i].classList.remove('active');
-      serviceContent.classList.remove('active');
-    }
+//     for (let i = 0; i < services.length; i++) {
+//       const serviceContent = services[i].getElementsByClassName('service-content')[0];
+//       services[i].classList.remove('active');
+//       serviceContent.classList.remove('active');
+//     }
 
-    const currentService = event.target.parentElement;
-    currentService.classList.add('active');
-    currentService.nextElementSibling.classList.add('active');
-}
+//     const currentService = event.target.parentElement;
+//     currentService.classList.add('active');
+//     currentService.nextElementSibling.classList.add('active');
+// }
+
+$(document).ready(function() {
+    $('.service-image').click(function() {
+      const index = $(this).data('service-index');
+      $('.service').removeClass('active').eq(index).addClass('active');
+    });
+});
