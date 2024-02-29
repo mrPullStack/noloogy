@@ -186,3 +186,6 @@ nav{
 .contact-form button:hover{
     background-color: #0056b3;
 }
+.content-text h2, h4{
+    text-align: center;
+}
