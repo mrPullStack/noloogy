@@ -1,9 +1,15 @@
-const images = document.querySelectorAll('.service img');
-const contents = document.querySelectorAll('.service-content');
+function showContent(element){
+    const serviceImages = document.getElementsByClassName('service-image');
+    const serviceContents = document.getElementsByClassName('service-content');
 
-images.forEach((img, index) => {
-    Image.addEventListener('click', () => {
-        contents.forEach(content =>  content.style.display = 'none');
-        contents[index].style.display = 'block';
-    });
-    });
+    for (let i = 0; i < serviceImages.length; i++){
+        serviceImages[i].classList.remove('active');
+        serviceContents[i].classList.remove('active');
+    }
+
+    const currentServiceImage = element.parentElement;
+    const currentServiceContent = currentServiceImage.nextElementSibling;
+
+    currentServiceImage.classList.add('active');
+    currentServiceContent.classList.add('active');
+}
